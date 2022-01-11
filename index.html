@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
+</head>
+<body>
+  <div class="container d-flex">
+    
+    <div class="form">
+      <h1>SIGN UP</h1>
+      <form action="#" method="post" onsubmit="submitfun()">
+        <label for="nm">
+           Name: 
+           <div class="inpt">
+               <i class="fas fa-user-circle icon"></i>
+               <input type="text" placeholder="Enter your Full Name" name="nm" pattern="[a-z]{1,15}" title="Please   enter your valid name" value="" id="nm" required>
+           </div>
+        </label>
+        <label for="email">
+          Email Address:
+          <div class="inpt">
+            <i class="fas fa-envelope-open icon"></i>
+            <input type="email" name="email" id="email" value="" placeholder="Enter your Email_Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please enter your valid Email Address" required>
+          </div>
+        </label>
+        <label for="id">
+          Id Proof: 
+          <div class="inpt">
+            <i class="fas fa-address-card icon"></i>
+            <select name="id" id="id" onchange="id_type()" required>
+              <option value=" ">Select your Id proof Type</option>
+              <option value="Adhaar_Number">Adhaar card</option>
+              <option value="Pen_card">Pen card</option>
+              <option value="Driving_licence">Driving Licence</option>
+              <option value="Passport">Passport</option>
+            </select>
+          </div>
+         
+        </label>
+
+        <label for="id_input" id="id_input" class="id_input" >
+          <span id="idsss"></span> 
+          <div class="inpt">
+            <i class="fas fa-address-card icon"></i>
+            <input type="text" class="ids" name="id_input" id="ipn_id" required>
+          </div>
+           
+        </label>
+        <label for="gender" required id="gen">
+        Gender:
+        <div class="gender">
+          <label for="gender">
+            <input type="radio" name="gender" class="radio" value="male"> Male</label>
+          <label for="gender">
+            <input type="radio" name="gender" class="radio" value="female"> Female</label>
+          <label for="gender"><input type="radio" name="gender" class="radio" value="other">Other</label>
+          
+        </div>
+          
+        </label>
+        <label for="DoB">
+         Date-Of-Birth: 
+         <div class="inpt">
+          <i class="fas fa-birthday-cake icon"></i>
+          <input type="date" name="DoB" id="DoB" onchange="Age_cal()" required>
+        </div>
+        </label>
+        <label for="age" id="Age" style="display: none;">
+          Age: 
+          <div class="inpt">
+            <input type="number" id="age" name="age" readonly>
+          </div>
+        </label>
+        <label for="Phone">
+          Phone:
+          <div class="inpt">
+            <i class="fas fa-phone-alt icon"></i>
+            <input type="number" name="Phone" id="Phone" placeholder="Enter your Phone Number" pattern="[6789][0-9]{9}" title="Plase enter valit Phone Number" required>
+          </div>
+        </label>
+        <label for="address">
+        Address:
+          <div class="inpt">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <textarea name="address" id="ads" cols="20" rows="2" placeholder="Address"></textarea>
+          </div>
+        </label>
+
+        <div class="check"><input type="checkbox" name="check" id="check" required><a href="#">Term's & Condition</a></div>
+         <div class="btn">
+          <button type="submit" class="btn1">Submit</button>
+          <button type="reset" class="btn2">Reset</button>  
+         </div>
+        
+      </form>
+
+      <h2>Sign Up With</h2> 
+      <div class="socal_media d-flex">
+        <div class="sm go"><i class="fab fa-google"></i></div>
+        <div class="sm tw"><i class="fab fa-twitter"></i></div>
+        <div class="sm ln"><i class="fab fa-linkedin-in"></i></div>
+      </div>
+    </div>
+    <div class="intro">
+      <div class="content">
+        <img src="users.png" alt="user">
+        <h1>Hey User</h1>
+        <h3>Enter your Details and Start your joureny with us</h3>
+      
+      </div>
+      </div>
+  </div>
+ <script src="script.js"></script>
+</body>
+</html>
